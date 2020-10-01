@@ -1,13 +1,13 @@
-package xyz.pasoder.pasoderserver.password.store.dao;
+package xyz.pasoder.server.password.store.dao;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import xyz.pasoder.pasoderserver.password.store.pojo.PasswordUnit;
+import xyz.pasoder.server.password.store.pojo.PasswordUnit;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 class PasswordUtilDaoTest {

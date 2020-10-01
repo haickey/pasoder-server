@@ -1,4 +1,4 @@
-package xyz.pasoder.pasoderserver.password.store.pojo;
+package xyz.pasoder.server.password.store.pojo;
 
 import lombok.Data;
 

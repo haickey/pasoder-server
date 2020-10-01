@@ -1,6 +1,6 @@
-package xyz.pasoder.pasoderserver.password.store.dao;
+package xyz.pasoder.server.password.store.dao;
 
-import xyz.pasoder.pasoderserver.password.store.pojo.PasswordUnit;
+import xyz.pasoder.server.password.store.pojo.PasswordUnit;
 
 import java.util.List;
 
