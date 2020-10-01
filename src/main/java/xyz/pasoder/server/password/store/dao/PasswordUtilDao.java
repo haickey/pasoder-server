@@ -11,5 +11,5 @@ public interface PasswordUtilDao {
 
     int updateByPrimaryKey(PasswordUnit doPojo);
 
-    int deleteByPrimaryKey(PasswordUnit doPojo);
+    int deleteByPrimaryKey(long pojoId);
 }

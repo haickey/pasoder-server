@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "xyz.pasoder.server")
-@MapperScan(basePackages = {"xyz.pasoder.pasoderserver.**.dao"})
+@MapperScan(basePackages = {"xyz.pasoder.server.**.dao"})
 public class PasoderServerApplication {
 
     public static void main(final String[] args) {
