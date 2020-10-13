@@ -3,12 +3,10 @@ package xyz.pasoder.server.password.store.pojo;
 import lombok.Data;
 
 @Data
-public class PasswordUnit {
+public class PasswordUnitDO {
     private long passwordUnitId;
     private String ip;
     private String name;
-    private String enCryPassword;
-    private String deCryPassword;
     private String password;
     private String description;
 
