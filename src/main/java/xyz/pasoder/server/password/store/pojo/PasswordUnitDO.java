@@ -9,20 +9,4 @@ public class PasswordUnitDO {
     private String name;
     private String password;
     private String description;
-
-    public String getEnCryPassword() {
-        return password;
-    }
-
-    public void setEnCryPassword(final String enCryPassword) {
-        this.password = enCryPassword;
-    }
-
-    public String getDeCryPassword() {
-        return password;
-    }
-
-    public void setDeCryPassword(final String deCryPassword) {
-        this.password = deCryPassword;
-    }
 }

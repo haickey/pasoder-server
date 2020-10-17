@@ -6,4 +6,12 @@ http://dozer.sourceforge.net/schema/beanmapping.xsd">
     <configuration>
         
     </configuration>
+    <mapping>
+        <class-a>xyz.pasoder.server.password.store.pojo.PasswordUnit</class-a>
+        <class-b>xyz.pasoder.server.password.store.pojo.PasswordUnitDO</class-b>
+        <field>
+            <a>enCryPassword</a>
+            <b>password</b>
+        </field>
+    </mapping>
 </mappings>

@@ -9,13 +9,11 @@ import xyz.pasoder.server.password.store.pojo.PasswordUnitDO;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
-class PasswordUtilDaoTest {
-
+public class PasswordUtilDaoTest {
     public static final String TESTHOST = "testhost";
     @Autowired
     PasswordUtilDao biz;
@@ -109,6 +107,4 @@ class PasswordUtilDaoTest {
         final List<PasswordUnitDO> passListNew = biz.findPasswordsByIp(TESTHOST);
         assertEquals(0, passListNew.size());
     }
-
-
 }
