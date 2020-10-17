@@ -1,7 +1,6 @@
 package xyz.pasoder.server.password.store.service;
 
 import lombok.extern.slf4j.Slf4j;
-
 import org.dozer.Mapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,11 @@ import xyz.pasoder.server.password.store.dao.PasswordUtilDao;
 import xyz.pasoder.server.password.store.pojo.PasswordUnit;
 import xyz.pasoder.server.password.store.pojo.PasswordUnitDO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
 
 @Slf4j
@@ -26,7 +29,7 @@ public class PasswordUnitServiceTest {
     PasswordUnitService biz;
 
 
-    @Autowired(required=true)
+    @Autowired(required = true)
     Mapper dozerMapper;
 
     @Mock
@@ -40,7 +43,31 @@ public class PasswordUnitServiceTest {
 
     @Test
     public void findPasswordUnitByIp() {
+        final List<PasswordUnitDO> testResult = new ArrayList<>();
+        final PasswordUnitDO dbo = new PasswordUnitDO();
+        final String ip = "testIP";
+        final String password = "password";
+        final String name = "name";
+        final String desc = "desc";
+        final int id = 123;
+        dbo.setIp(ip);
+        dbo.setPassword(password);
+        dbo.setName(name);
+        dbo.setDescription(desc);
+        dbo.setPasswordUnitId(id);
+        testResult.add(dbo);
+        when(passwordUtilDao.findPasswordsByIp("testIP")).thenReturn(testResult);
 
+        final List<PasswordUnit> bizResult = biz.findPasswordUnitByIp("testIP");
+        final List<PasswordUnit> expectedResult = new ArrayList<>();
+        final PasswordUnit expectedBo = new PasswordUnit();
+        expectedBo.setEnCryPassword(password);
+        expectedBo.setName(name);
+        expectedBo.setDescription(desc);
+        expectedBo.setPasswordUnitId(id);
+        expectedBo.setIp(ip);
+        expectedResult.add(expectedBo);
+        assertEquals(expectedResult, bizResult);
     }
 
     @Test
