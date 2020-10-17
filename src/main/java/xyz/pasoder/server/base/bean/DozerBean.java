@@ -2,7 +2,6 @@ package xyz.pasoder.server.base.bean;
 
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
